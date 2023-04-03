@@ -1,0 +1,11 @@
+.contacts {
+    padding-top: 100px;
+    &__title {
+        text-align: center;
+    }
+    &__wrapper {
+        padding-top: 30px;
+        display: flex;
+        justify-content: space-between;
+    }
+}
