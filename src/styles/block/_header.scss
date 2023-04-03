@@ -1,10 +1,15 @@
 .header {
-    background-color:rgb(188, 205, 199);
+    background-color:rgb(255, 255, 255 , 0.7);
+    position: fixed;
+    width: 100%;
     &__wrapper {
         padding: 10px;
         display: flex;
         justify-content: space-around;
         align-items: center;
+        // background-color:rgb(188, 205, 199);
+        width: 100%;
+        z-index: 10;
     }
     &__logo {
         img {
@@ -14,7 +19,7 @@
     &__navigation-a {
         text-decoration: none;
         padding-right: 45px;
-        color: rgb(66, 63, 63);
+        color: $text-color;
         font-size: 24px;
         font-weight: 500;
     }
