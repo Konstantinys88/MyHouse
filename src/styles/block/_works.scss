@@ -4,10 +4,11 @@
         text-align: center;
     }
     &__grid {
-        padding-top: 40px;
+        padding: 40px 25px 0 25px;
         display: grid;
-        grid-template-columns: repeat(3, 344px);
+        grid-template-columns: repeat(3, 300px);
         gap: 50px;
+        justify-content: space-between;
     }
     &__grid-item {
         // position: relative;
