@@ -40,18 +40,26 @@
                 font-weight: bold;
                 color: $text-color;
             }
+            input:first-child {
+                margin-top: 0;
+            }
         }
     }
     &__btn {
-        margin-top: 10px;
+        // margin-top: 10px;
         border: 1mm solid $text-color;
         border-radius: 15px;
         background-color: #fff;
-        height: 110px;
+        height: 170px;
         padding: 5px;
         font-size: 16px;
         font-weight: bold;
         color: $text-color;
         cursor: pointer;
+        transition: all 1s;
+        &:hover {
+            background-color: rgb(103, 101, 101);
+            color:#fff;
+        }
     }
 }

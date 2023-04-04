@@ -64,6 +64,7 @@ body .container {
 }
 .header__social-a {
   padding-right: 20px;
+  cursor: pointer;
 }
 .header__social-a img {
   width: 40px;
@@ -90,7 +91,7 @@ body .container {
   margin-top: 3px;
   width: 100%;
   height: 5px;
-  background-color: #254D4D;
+  background-color: #000000;
   -webkit-transition: 0.5s all;
   transition: 0.5s all;
 }
@@ -306,17 +307,73 @@ body .container {
   font-weight: bold;
   color: rgb(66, 63, 63);
 }
+.contacts__form form input:first-child {
+  margin-top: 0;
+}
 .contacts__btn {
-  margin-top: 10px;
   border: 1mm solid rgb(66, 63, 63);
   border-radius: 15px;
   background-color: #fff;
-  height: 110px;
+  height: 170px;
   padding: 5px;
   font-size: 16px;
   font-weight: bold;
   color: rgb(66, 63, 63);
   cursor: pointer;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+.contacts__btn:hover {
+  background-color: rgb(103, 101, 101);
+  color: #fff;
+}
+
+.overlay {
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  top: 0;
+  z-index: 11;
+}
+.overlay_active {
+  display: block;
+}
+
+.modal {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  max-width: 440px;
+  width: 100%;
+  min-height: 200px;
+  padding: 10px;
+  background-color: rgba(253, 253, 253, 0.9);
+  border-radius: 15px;
+  z-index: 100;
+}
+.modal__close {
+  position: absolute;
+  top: 0;
+  right: -35px;
+  font-size: 40px;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+}
+.modal__subtitle {
+  padding: 0 0 15px 0;
+  font-size: 16px;
+  font-weight: bold;
+  color: rgb(66, 63, 63);
+  text-align: center;
+}
+.modal_active {
+  display: block;
 }
 
 .footer {
@@ -366,7 +423,7 @@ body .container {
     left: -100%;
     -webkit-transition: 0.6s;
     transition: 0.6s;
-    background-color: rgba(188, 205, 199, 0.9);
+    background-color: rgba(119, 125, 123, 0.9);
     z-index: 10;
   }
   .header__wrapper_active {
@@ -392,6 +449,9 @@ body .container {
   }
   .header__social {
     padding-top: 50px;
+  }
+  .header__social-a:first-child {
+    display: none;
   }
   .hamburger {
     display: block;
@@ -428,6 +488,9 @@ body .container {
   .contacts__tel a {
     padding-top: 5px;
   }
+  .contacts__form {
+    padding-top: 10px;
+  }
 }
 @media (max-width: 575px) {
   .my-info__wrapper {
@@ -452,6 +515,7 @@ body .container {
         align-self: center;
   }
   .contacts__btn {
+    margin-top: 10px;
     width: 300px;
     height: 50px;
   }

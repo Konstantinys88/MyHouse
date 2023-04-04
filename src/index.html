@@ -30,9 +30,9 @@
                     </nav>
                 </menu>
                 <div class="header__social">
-                    <a href="#" class="header__social-a"><img src="img/email.svg" alt="mail"></a>
+                    <a href="#" class="header__social-a modal-link"><img src="img/email.svg" alt="mail"></a>
                     <a href="#" class="header__social-a"><img src="img/telegram.svg" alt="telegram"></a>
-                    <a href="#" class="header__social-a"><img src="img/tel.svg" alt="tel"></a>
+                    <a href="tel: +79851917045" class="header__social-a"><img src="img/tel.svg" alt="tel"></a>
                 </div>
             </div>
             <div class="hamburger">
@@ -130,13 +130,14 @@
             <div class="contacts__title title">Контакты</div>
             <div class="contacts__wrapper">
                 <div class="contacts__tel">
-                    <a href="tel: +74951234567">+7 (495) 123-45-67</a>
-                    <a href="mailto: example@mail.ru">example@mail.ru</a>
+                    <a href="tel: +79851917045">+7 (985) 191-70-45</a>
+                    <a href="mailto: maschkovc@yandex.ru">maschkovc@yandex.ru</a>
                 </div>
                 <div class="contacts__form">
                     <form action="#">
-                        <input type="text" placeholder="Ваше имя">
-                        <input type="text" placeholder="Ваш Email">
+                        <input name="name" type="text" placeholder="Ваше имя">
+                        <input name="phone" type="number" placeholder="Ваш телефон">
+                        <input name="email" type="email" placeholder="Ваш Email">
                     </form>
                     <button class="contacts__btn">Отправить <br> заявку</button>
                 </div>
@@ -147,12 +148,27 @@
     <footer class="footer">
         <div class="container">
             <div class="footer__wrapper">
-                <a href="#" class="header__social-a"><img src="img/email.svg" alt="mail"></a>
+                <a href="#" class="header__social-a modal-link"><img src="img/email.svg" alt="mail"></a>
                 <a href="#" class="header__social-a"><img src="img/telegram.svg" alt="telegram"></a>
-                <a href="#" class="header__social-a"><img src="img/tel.svg" alt="tel"></a>
+                <a href="tel: +79851917045" class="header__social-a"><img src="img/tel.svg" alt="tel"></a>
             </div>
         </div>
     </footer>
+
+    <div class="overlay">
+        <div class="modal">
+            <div class="modal__close">&times;</div>
+            <div class="modal__subtitle">Просто заполните заявку и я перезвоню Вам.</div>
+            <div class="contacts__form">
+                <form action="#">
+                    <input name="name" type="text" placeholder="Ваше имя">
+                    <input name="phone" type="number" placeholder="Ваш телефон">
+                    <input name="email" type="email" placeholder="Ваш Email">
+                </form>
+                <button class="contacts__btn">Отправить <br> заявку</button>
+            </div>
+        </div>
+    </div>
 
 
 
