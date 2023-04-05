@@ -278,13 +278,11 @@ body .container {
   color: rgb(66, 63, 63);
   padding-top: 25px;
 }
-.contacts__form {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+.contacts__form .error {
+  padding-left: 15px;
+  font-size: 16px;
+  font-weight: bold;
+  color: rgb(66, 63, 63);
 }
 .contacts__form form {
   display: -webkit-box;
@@ -296,7 +294,6 @@ body .container {
           flex-direction: column;
 }
 .contacts__form form input {
-  padding-left: 15px;
   margin-top: 10px;
   width: 300px;
   height: 50px;
@@ -311,10 +308,12 @@ body .container {
   margin-top: 0;
 }
 .contacts__btn {
+  margin-top: 10px;
   border: 1mm solid rgb(66, 63, 63);
   border-radius: 15px;
   background-color: #fff;
-  height: 170px;
+  width: 300px;
+  height: 50px;
   padding: 5px;
   font-size: 16px;
   font-weight: bold;
