@@ -54,19 +54,19 @@ $(document).ready(function() {
 			},
 			messages: {
 				name: {
-					required: "Введите свое имя",
-					minlength: jQuery.validator.format("Введите {0} символов!")
+					required: "Пожалуйста введите Ваше имя.",
+					minlength: jQuery.validator.format("Введите больше {0} символов!")
 				},
-				phone: "Введите ваш телефон",
+				phone: "Пожалуйста введите ваш номер телефон",
 				email: {
-					required: "Введите свой email",
+					required: "Пожалуйста введите ваш email",
 					email: "Не верно введен адрес",
 				}
 			},
 		});
 	}
 	validateForms(".feed-form");
-	// validateForms(".feed-form2");
+	validateForms(".feed-form-modal");
 
 	$("input[name=phone]").mask("+7 (999) 999-99-99");
 

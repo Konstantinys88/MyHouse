@@ -251,16 +251,21 @@ body .container {
 .contacts__title {
   text-align: center;
 }
+.contacts__subtitle {
+  padding-top: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  color: rgb(66, 63, 63);
+  text-align: center;
+}
 .contacts__wrapper {
   text-align: center;
   padding-top: 30px;
-  padding-bottom: 30px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 .contacts__tel {
   display: -webkit-box;
@@ -270,6 +275,8 @@ body .container {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -ms-flex-item-align: center;
+      align-self: center;
 }
 .contacts__tel a {
   text-decoration: none;
@@ -278,11 +285,18 @@ body .container {
   color: rgb(66, 63, 63);
   padding-top: 25px;
 }
+.contacts__form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
 .contacts__form .error {
-  padding-left: 15px;
-  font-size: 16px;
-  font-weight: bold;
+  font-size: 14px;
   color: rgb(66, 63, 63);
+  text-align: center;
 }
 .contacts__form form {
   display: -webkit-box;
@@ -292,8 +306,11 @@ body .container {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  height: 100%;
+  min-height: 300px;
 }
 .contacts__form form input {
+  text-align: center;
   margin-top: 10px;
   width: 300px;
   height: 50px;
@@ -347,13 +364,38 @@ body .container {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  max-width: 440px;
+  max-width: 325px;
   width: 100%;
-  min-height: 200px;
+  max-height: 390px;
   padding: 10px;
   background-color: rgba(253, 253, 253, 0.9);
   border-radius: 15px;
   z-index: 100;
+}
+.modal form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-item-align: center;
+      align-self: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.modal form .error {
+  text-align: center;
+  font-size: 14px;
+  color: rgb(66, 63, 63);
+}
+.modal form input {
+  margin-right: 0;
 }
 .modal__close {
   position: absolute;
@@ -365,7 +407,7 @@ body .container {
   cursor: pointer;
 }
 .modal__subtitle {
-  padding: 0 0 15px 0;
+  padding: 5px 0 15px 0;
   font-size: 16px;
   font-weight: bold;
   color: rgb(66, 63, 63);
@@ -401,7 +443,7 @@ body .container {
             justify-content: center;
   }
   .contacts__wrapper {
-    padding: 30px 30px;
+    padding: 30px 30px 0 30px;
   }
 }
 @media (max-width: 992px) {
