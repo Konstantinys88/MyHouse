@@ -32,6 +32,18 @@ body .container {
   border: 0.5px solid rgb(66, 63, 63);
 }
 
+.pageup {
+  display: none;
+  position: fixed;
+  bottom: 60px;
+  right: 40px;
+}
+.pageup img {
+  width: 50px;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
 .header {
   background-color: rgba(255, 255, 255, 0.9);
   position: fixed;
@@ -464,7 +476,7 @@ body .container {
     left: -100%;
     -webkit-transition: 0.6s;
     transition: 0.6s;
-    background-color: rgba(119, 125, 123, 0.9);
+    background-color: rgba(253, 253, 253, 0.9);
     z-index: 10;
   }
   .header__wrapper_active {

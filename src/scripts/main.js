@@ -84,6 +84,14 @@ $(document).ready(function() {
 		});
 		return false;
 	});
+
+	$(window).scroll(function() {
+		if ($(this).scrollTop() > 600) {
+			$(".pageup").fadeIn();
+		} else {
+			$(".pageup").fadeOut();
+		}
+	});
 });
 
 

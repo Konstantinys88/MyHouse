@@ -16,3 +16,14 @@ body {
     margin: 35px 25px 0 25px;
     border: 0.5px solid $text-color;
 }
+
+.pageup {
+    display: none;
+    position: fixed;
+    bottom: 60px;
+    right: 40px;
+    img {
+        width: 50px;
+        transform: rotate(180deg);
+    }
+}
