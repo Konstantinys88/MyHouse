@@ -320,6 +320,17 @@ body .container {
       -ms-flex-pack: center;
           justify-content: center;
 }
+.contacts__form_input {
+  text-align: center;
+  margin-top: 10px;
+  width: 300px;
+  height: 50px;
+  border: 1mm solid rgb(66, 63, 63);
+  border-radius: 15px;
+  font-size: 16px;
+  font-weight: bold;
+  color: rgb(66, 63, 63);
+}
 .contacts__form .error {
   font-size: 14px;
   color: rgb(66, 63, 63);
@@ -344,17 +355,6 @@ body .container {
   -ms-flex-item-align: center;
       align-self: center;
 }
-.contacts__form form input {
-  text-align: center;
-  margin-top: 10px;
-  width: 300px;
-  height: 50px;
-  border: 1mm solid rgb(66, 63, 63);
-  border-radius: 15px;
-  font-size: 16px;
-  font-weight: bold;
-  color: rgb(66, 63, 63);
-}
 .contacts__form form input:first-child {
   margin-top: 0;
 }
@@ -376,6 +376,35 @@ body .container {
 .contacts__btn:hover {
   background-color: rgb(103, 101, 101);
   color: #fff;
+}
+.contacts__policy {
+  width: 300px;
+  padding: 10px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-item-align: center;
+      align-self: center;
+}
+.contacts__policy span {
+  font-size: 14px;
+  font-weight: bold;
+  color: rgb(66, 63, 63);
+}
+.contacts__checkbox {
+  margin-right: 10px;
+  margin-left: 20px;
+}
+
+#checkbox-error {
+  color: rgb(171, 0, 0);
+  display: block;
+  padding-right: 10px;
 }
 
 .overlay {
@@ -400,11 +429,14 @@ body .container {
           transform: translate(-50%, -50%);
   max-width: 325px;
   width: 100%;
-  max-height: 390px;
+  max-height: 435px;
   padding: 10px;
   background-color: rgba(253, 253, 253, 0.9);
   border-radius: 15px;
   z-index: 100;
+}
+.modal__span {
+  text-align: center;
 }
 .modal form {
   display: -webkit-box;
@@ -449,6 +481,15 @@ body .container {
 }
 .modal_active {
   display: block;
+}
+
+.policy {
+  padding: 30px 150px;
+  text-align: justify;
+}
+.policy h1 {
+  padding-bottom: 30px;
+  text-align: center;
 }
 
 .footer {

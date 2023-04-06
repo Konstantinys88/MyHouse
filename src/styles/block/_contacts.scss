@@ -31,6 +31,17 @@
     &__form {
         display: flex;
         justify-content: center;
+        &_input {
+            text-align: center;
+            margin-top: 10px;
+            width: 300px;
+            height: 50px;
+            border: 1mm solid $text-color;
+            border-radius: 15px;
+            font-size: 16px;
+            font-weight: bold;
+            color: $text-color;
+        }
         .error {
             font-size: 14px;
             color: $text-color;
@@ -44,17 +55,6 @@
             justify-content: center;
             align-items: center;
             align-self: center;
-            input {
-                text-align: center;
-                margin-top: 10px;
-                width: 300px;
-                height: 50px;
-                border: 1mm solid $text-color;
-                border-radius: 15px;
-                font-size: 16px;
-                font-weight: bold;
-                color: $text-color;
-            }
             input:first-child {
                 margin-top: 0;
             }
@@ -78,4 +78,28 @@
             color:#fff;
         }
     }
+    &__policy {
+        width: 300px;
+        padding: 10px 0;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        align-self: center;
+        span {
+            font-size: 14px;
+            font-weight: bold;
+            color: $text-color;
+        }
+    }
+    &__checkbox {
+        margin-right: 10px;
+        margin-left: 20px;
+    }
+}
+
+#checkbox-error {
+    color: rgb(171, 0, 0);
+    display: block;
+    padding-right: 10px;
+    // position: relative;
 }

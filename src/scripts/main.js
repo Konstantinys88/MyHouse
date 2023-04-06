@@ -50,7 +50,8 @@ $(document).ready(function() {
 				email: {
 					required: true,
 					email: true,
-				}
+				},
+				checkbox: "required",
 			},
 			messages: {
 				name: {
@@ -61,6 +62,9 @@ $(document).ready(function() {
 				email: {
 					required: "Пожалуйста введите ваш email",
 					email: "Не верно введен адрес",
+				},
+				checkbox: {
+					required: "Чтобы продолжить, установите этот флажок",
 				}
 			},
 		});
@@ -77,8 +81,8 @@ $(document).ready(function() {
 			url: "mailer/smart.php",
 			data: $(this).serialize()
 		}).done(function() {
-			$(this).find("input").val("");
-    
+			// $(this).find("input").val("");
+			$(this).find(".contacts__form_input").val("");
     
 			$("form").trigger("reset");
 		});
