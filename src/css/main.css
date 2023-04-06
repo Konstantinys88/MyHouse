@@ -186,13 +186,28 @@ body .container {
   max-width: 300px;
   max-height: 500px;
   text-align: center;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+.works__grid-item :hover {
+  -webkit-filter: grayscale(0.75);
+          filter: grayscale(0.75);
+  -webkit-transition: all 1s;
+  transition: all 1s;
 }
 .works__grid-item img {
   border-radius: 15px;
   width: 100%;
+  margin-bottom: 10px;
+  height: 345px;
+  background-color: rgb(238, 237, 230);
 }
-.works__grid-item p {
-  padding-top: 5px;
+.works__grid-item a {
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 900;
+  color: rgb(66, 63, 63);
+  text-transform: uppercase;
 }
 
 .skills {
@@ -320,6 +335,14 @@ body .container {
           flex-direction: column;
   height: 100%;
   min-height: 300px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-item-align: center;
+      align-self: center;
 }
 .contacts__form form input {
   text-align: center;
@@ -328,7 +351,6 @@ body .container {
   height: 50px;
   border: 1mm solid rgb(66, 63, 63);
   border-radius: 15px;
-  margin-right: 10px;
   font-size: 16px;
   font-weight: bold;
   color: rgb(66, 63, 63);
@@ -563,14 +585,13 @@ body .container {
     -ms-flex-item-align: center;
         align-self: center;
   }
-  .contacts__form form {
-    -ms-flex-item-align: center;
-        align-self: center;
-  }
   .contacts__btn {
     margin-top: 10px;
     width: 300px;
     height: 50px;
+  }
+  .pageup {
+    visibility: hidden;
   }
 }
 @media (max-width: 374px) {

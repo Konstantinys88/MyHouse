@@ -13,7 +13,6 @@
     &__wrapper {
         text-align: center;
         padding-top: 30px;
-        // padding-bottom: 5px;
         display: flex;
         justify-content: space-around;
     }
@@ -42,15 +41,16 @@
             flex-direction: column;
             height: 100%;
             min-height: 300px;
+            justify-content: center;
+            align-items: center;
+            align-self: center;
             input {
-                // padding-left: 15px;
                 text-align: center;
                 margin-top: 10px;
                 width: 300px;
                 height: 50px;
                 border: 1mm solid $text-color;
                 border-radius: 15px;
-                margin-right: 10px;
                 font-size: 16px;
                 font-weight: bold;
                 color: $text-color;
