@@ -5,9 +5,20 @@ window.addEventListener("DOMContentLoaded", () => {
 		modal = document.querySelector(".modal"),
 		modalClose = document.querySelector(".modal__close"),
 		// body = document.querySelector("body"),
-		hamburger = document.querySelector(".hamburger");
+		hamburger = document.querySelector(".hamburger"),
+		form = document.querySelector(".feed-form"),
+		contactsBtn = document.querySelectorAll(".contacts__btn"),
+		contactsFormEnd = document.querySelector(".form__end");
 		
-		
+	
+	contactsBtn.forEach(item => {
+		item.addEventListener("click", (e) => {
+			e.preventDefault();
+			form.style.display = "none";
+			contactsFormEnd.style.display = "block";
+		})
+	})
+	
 
 	hamburger.addEventListener("click", () => {
 		hamburger.classList.toggle("hamburger_active");

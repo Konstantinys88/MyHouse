@@ -407,6 +407,24 @@ body .container {
   padding-right: 10px;
 }
 
+.form__end {
+  display: none;
+  height: 100%;
+  min-height: 300px;
+  width: 300px;
+  top: 50%;
+  padding-top: 115px;
+}
+.form__end p {
+  text-align: center;
+  font-size: 20px;
+  font-weight: 700;
+  color: #423f3f;
+  border: 1mm solid rgb(66, 63, 63);
+  border-radius: 15px;
+  padding: 15px;
+}
+
 .overlay {
   display: none;
   position: fixed;
