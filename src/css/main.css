@@ -121,7 +121,7 @@ body .container {
 
 .my-info {
   padding: 150px 25px 0;
-  height: 100vh;
+  height: 100%;
 }
 .my-info__wrapper {
   margin-top: 25px;
