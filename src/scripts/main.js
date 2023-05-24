@@ -11,24 +11,24 @@ window.addEventListener("DOMContentLoaded", () => {
 		contactsFormEnd = document.querySelector(".form__end"),
 		modalSubtitle = document.querySelector(".modal__subtitle"),
 		feedFormModal = document.querySelector(".feed-form-modal");
-		
-	
-	contactsBtn.forEach(item => {
-		item.addEventListener("click", (e) => {
-			e.preventDefault();
-			form.style.display = "none";
-			contactsFormEnd.style.display = "block";
-			modalSubtitle.style.display= "none";
-			feedFormModal.remove();
 
-			const div = document.createElement("div");
-			div.textContent = "Спасибо скоро я с вами свяжусь !!!";
-			div.classList.add("contacts__modal_end");
-			modal.appendChild(div);
 
-		})
-	})
-	
+	// contactsBtn.forEach(item => {
+	// 	item.addEventListener("click", (e) => {
+	// 		e.preventDefault();
+	// 		form.style.display = "none";
+	// 		contactsFormEnd.style.display = "block";
+	// 		modalSubtitle.style.display = "none";
+	// 		feedFormModal.style.display = "none";
+
+	// 		const div = document.createElement("div");
+	// 		div.textContent = "Спасибо скоро я с вами свяжусь !!!";
+	// 		div.classList.add("contacts__modal_end");
+	// 		modal.appendChild(div);
+
+	// 	})
+	// })
+
 
 	hamburger.addEventListener("click", () => {
 		hamburger.classList.toggle("hamburger_active");
@@ -48,8 +48,8 @@ window.addEventListener("DOMContentLoaded", () => {
 	});
 
 	overlay.addEventListener("click", (e) => {
-		if(e.target === overlay) {
-			overlay.classList.remove("overlay_active");	
+		if (e.target === overlay) {
+			overlay.classList.remove("overlay_active");
 			modal.classList.remove("modal_active");
 		}
 	});
@@ -58,66 +58,66 @@ window.addEventListener("DOMContentLoaded", () => {
 
 //Отправка формы на почту
 
-$(document).ready(function() {
+// $(document).ready(function () {
 
-	function validateForms(form) {
-		$(form).validate({
-			rules: {
-				name: { 
-					required: true,
-					minlength: 2,
-				},
-				phone: "required",
-				email: {
-					required: true,
-					email: true,
-				},
-				checkbox: "required",
-			},
-			messages: {
-				name: {
-					required: "Пожалуйста введите Ваше имя.",
-					minlength: jQuery.validator.format("Введите больше {0} символов!")
-				},
-				phone: "Пожалуйста введите ваш номер телефон",
-				email: {
-					required: "Пожалуйста введите ваш email",
-					email: "Не верно введен адрес",
-				},
-				checkbox: {
-					required: "Чтобы продолжить, установите этот флажок",
-				}
-			},
-		});
-	}
-	validateForms(".feed-form");
-	validateForms(".feed-form-modal");
+// 	function validateForms(form) {
+// 		$(form).validate({
+// 			rules: {
+// 				name: {
+// 					required: true,
+// 					minlength: 2,
+// 				},
+// 				phone: "required",
+// 				email: {
+// 					required: true,
+// 					email: true,
+// 				},
+// 				checkbox: "required",
+// 			},
+// 			messages: {
+// 				name: {
+// 					required: "Пожалуйста введите Ваше имя.",
+// 					minlength: jQuery.validator.format("Введите больше {0} символов!")
+// 				},
+// 				phone: "Пожалуйста введите ваш номер телефон",
+// 				email: {
+// 					required: "Пожалуйста введите ваш email",
+// 					email: "Не верно введен адрес",
+// 				},
+// 				checkbox: {
+// 					required: "Чтобы продолжить, установите этот флажок",
+// 				}
+// 			},
+// 		});
+// 	}
+// 	validateForms(".feed-form");
+// 	validateForms(".feed-form-modal");
 
-	$("input[name=phone]").mask("+7 (999) 999-99-99");
+// 	$("input[name=phone]").mask("+7 (999) 999-99-99");
 
-	$("form").submit(function(e) {
-		e.preventDefault();
-		$.ajax({
-			type: "POST",
-			url: "mailer/smart.php",
-			data: $(this).serialize()
-		}).done(function() {
-			// $(this).find("input").val("");
-			$(this).find(".contacts__form_input").val("");
-    
-			$("form").trigger("reset");
-		});
-		return false;
-	});
+// 	$("form").submit(function (e) {
+// 		e.preventDefault();
+// 		$.ajax({
+// 			type: "POST",
+// 			url: "mailer/smart.php",
+// 			data: $(this).serialize()
+// 		}).done(function () {
+// 			// $(this).find("input").val("");
+// 			$(this).find(".contacts__form_input").val("");
 
-	$(window).scroll(function() {
-		if ($(this).scrollTop() > 600) {
-			$(".pageup").fadeIn();
-		} else {
-			$(".pageup").fadeOut();
-		}
-	});
-});
+// 			$("form").trigger("reset");
+// 		});
+// 		return false;
+// 	});
+
+// 	$(window).scroll(function () {
+// 		if ($(this).scrollTop() > 600) {
+// 			$(".pageup").fadeIn();
+// 		} else {
+// 			$(".pageup").fadeOut();
+// 		}
+// 	});
+// });
 
 
 
