@@ -425,6 +425,17 @@ body .container {
   padding: 15px;
 }
 
+.contacts__modal_end {
+  text-align: center;
+  width: 300px;
+  border: 1mm solid #423f3f;
+  border-radius: 15px;
+  font-size: 16px;
+  font-weight: 700;
+  color: #423f3f;
+  padding: 10px;
+}
+
 .overlay {
   display: none;
   position: fixed;

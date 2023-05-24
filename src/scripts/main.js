@@ -8,7 +8,9 @@ window.addEventListener("DOMContentLoaded", () => {
 		hamburger = document.querySelector(".hamburger"),
 		form = document.querySelector(".feed-form"),
 		contactsBtn = document.querySelectorAll(".contacts__btn"),
-		contactsFormEnd = document.querySelector(".form__end");
+		contactsFormEnd = document.querySelector(".form__end"),
+		modalSubtitle = document.querySelector(".modal__subtitle"),
+		feedFormModal = document.querySelector(".feed-form-modal");
 		
 	
 	contactsBtn.forEach(item => {
@@ -16,6 +18,14 @@ window.addEventListener("DOMContentLoaded", () => {
 			e.preventDefault();
 			form.style.display = "none";
 			contactsFormEnd.style.display = "block";
+			modalSubtitle.style.display= "none";
+			feedFormModal.remove();
+
+			const div = document.createElement("div");
+			div.textContent = "Спасибо скоро я с вами свяжусь !!!";
+			div.classList.add("contacts__modal_end");
+			modal.appendChild(div);
+
 		})
 	})
 	
