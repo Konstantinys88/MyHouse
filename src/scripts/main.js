@@ -33,18 +33,23 @@ window.addEventListener("DOMContentLoaded", () => {
 	hamburger.addEventListener("click", () => {
 		hamburger.classList.toggle("hamburger_active");
 		menu.classList.toggle("header__wrapper_active");
+
+		document.body.classList.toggle('over');
 	});
 
 
 	[...modalLink].forEach(modalLink => modalLink.addEventListener("click", (e) => {
 		overlay.classList.add("overlay_active");
 		modal.classList.add("modal_active");
+		
 		e.preventDefault();
+		
 	}));
 
 	modalClose.addEventListener("click", () => {
 		overlay.classList.remove("overlay_active");
 		modal.classList.remove("modal_active");
+		
 	});
 
 	overlay.addEventListener("click", (e) => {
